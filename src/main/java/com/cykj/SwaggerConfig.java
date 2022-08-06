@@ -22,7 +22,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 //配置该api文档的基本信息
                 .apiInfo(apiInfo())
-                .apiInfo(apiInfo()).groupName("接口")
+                .apiInfo(apiInfo()).groupName("接口列表")
                 //enable：是否需要开启swagger功能 (默认开启，true 开启，false隐藏)
                 //.enable(false)
                 .select()
