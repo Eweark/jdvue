@@ -3,23 +3,26 @@ package com.cykj.controller;
 import com.alibaba.fastjson.JSONArray;
 import com.cykj.bean.Tblstaff;
 import com.cykj.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 
 @RestController
 @RequestMapping("/user")
+@Api(value = "接口说明",tags = "用户控制器")
 public class UserController {
     @Autowired
     private UserService userService;
 
+    @ApiOperation(value = "新增用户",notes = "获取用户管理集合")
     @RequestMapping(value = "/userList", method = RequestMethod.POST,
             produces="application/json;charset=utf-8")
     public String userList(Model model){
@@ -59,6 +62,15 @@ public class UserController {
         }else {
             return 0;
         }
+    }
+
+    @GetMapping("/insert")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "username",value = "用户名"),
+            @ApiImplicitParam(name = "password",value = "密码")
+    })
+    public String insert(@RequestParam("username") String Username,@RequestParam("password") String Password) {
+        return "插入成功";
     }
 
 }
