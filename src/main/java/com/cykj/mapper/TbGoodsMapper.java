@@ -1,9 +1,9 @@
 package com.cykj.mapper;
 
-import com.cykj.bean.TblGoods;
+import com.cykj.bean.TbGoods;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TbGoodsMapper {
-    int addGoods(TblGoods tbGoods);
+    int addGoods(TbGoods tbGoods);
 }

@@ -1,7 +1,7 @@
 package com.cykj.service;
 
-import com.cykj.bean.TblGoods;
+import com.cykj.bean.TbGoods;
 
 public interface TbGoodsService {
-    int addGoods(TblGoods tblGoods);
+    int addGoods(TbGoods tbGoods);
 }
