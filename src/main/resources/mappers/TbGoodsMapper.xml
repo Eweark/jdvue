@@ -6,4 +6,15 @@
     <insert id="addGoods" parameterType="com.cykj.bean.TbGoods">
         insert into tbgoods (sname,sprice,snum,img,desc) VALUES (#{sname},#{sprice},#{snum},#{img},#{desc})
     </insert>
+
+   <!--根据商品名称查询相关信息-->
+    <select id="seGoods" resultType="com.cykj.bean.TbGoods">
+        select * from tbgoods where
+        <if test="sname !=null and sname !=''">
+            and sname = like concat('%',#{sname},'%')
+        </if>
+
+    </select>
+
+
 </mapper>
