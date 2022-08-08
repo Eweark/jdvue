@@ -1,6 +1,8 @@
 package com.cykj.mapper;
 
 import com.cykj.bean.TbGoods;
+import com.cykj.bean.Tblstaff;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -13,4 +15,6 @@ public interface TbGoodsMapper {
     //根据商品名称查询相关信息
     List<TbGoods> seGoods(@Param("sname") String sname);
 
+    //查询用户
+    List<TbGoods> selAllGoods();
 }

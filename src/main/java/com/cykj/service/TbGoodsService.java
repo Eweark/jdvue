@@ -9,4 +9,6 @@ public interface TbGoodsService {
 
     //根据商品名称查询相关信息
     String seGoods(String sname);
+    //查询全部商品
+    List<TbGoods> selAllGoods();
 }

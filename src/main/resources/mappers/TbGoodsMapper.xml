@@ -17,4 +17,9 @@
     </select>
 
 
+<!--    查询全部商品-->
+    <select id="selAllGoods" resultType="com.cykj.bean.TbGoods">
+        select * from tbGoods
+    </select>
+
 </mapper>

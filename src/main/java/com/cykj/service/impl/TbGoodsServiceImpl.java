@@ -30,4 +30,9 @@ public class TbGoodsServiceImpl implements TbGoodsService {
         }
         return msg;
     }
+
+    @Override
+    public List<TbGoods> selAllGoods() {
+        return tbGoodsMapper.selAllGoods();
+    }
 }
