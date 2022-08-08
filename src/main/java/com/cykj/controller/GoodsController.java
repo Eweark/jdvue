@@ -31,9 +31,9 @@ public class GoodsController {
     };
     @RequestMapping(value = "/addGoodsPage",produces = "application/json;charset=UTF-8")
     public String addGoodsPage(){
-        return "addGoods";
+        return "addGood ";
     }
-    @RequestMapping(value = "/addGoods",produces = "application/json;charset=UTF-8")
+    @RequestMapping("/addGoods")
     @ResponseBody
     public int addGoods(TbGoods tbGoods){
         int re=tbGoodsService.addGoods(tbGoods);
