@@ -23,28 +23,20 @@ public class GoodsController {
     @Autowired
     private TbGoodsService tbGoodsService;
 
-    @RequestMapping(value = "/goods", produces = "application/json;charset=UTF-8")
-    public String seGoods(String sname) {
+    @RequestMapping(value = "/goods",produces = "application/json;charset=UTF-8")
+    public String seGoods(String sname){
         String seGoods = tbGoodsService.seGoods(sname);
-        return seGoods;
-    }
-
-    @RequestMapping(value = "/addGoodsPage", produces = "application/json;charset=UTF-8")
-    public String addGoodsPage() {
+        return  seGoods;
+    };
+    @RequestMapping(value = "/addGoodsPage",produces = "application/json;charset=UTF-8")
+    public String addGoodsPage(){
         return "addGoods";
     }
-
-    @RequestMapping(value = "/addGoods", produces = "application/json;charset=UTF-8")
+    @RequestMapping(value = "/addGoods",produces = "application/json;charset=UTF-8")
     @ResponseBody
-    public int addGoods(TbGoods tbGoods) {
-        int re = tbGoodsService.addGoods(tbGoods);
-        return re;
+    public int addGoods(TbGoods tbGoods){
+        int re=tbGoodsService.addGoods(tbGoods);
+        return  re;
     }
 
-    @RequestMapping(value = "/updateGoods", produces = "application/json;charset=UTF-8")
-    @ResponseBody
-    public int updateGoods(TbGoods tbGoods) {
-        int re = tbGoodsService.updateGoods(tbGoods);
-        return re;
-    }
 }
