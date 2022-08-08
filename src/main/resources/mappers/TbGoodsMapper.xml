@@ -7,7 +7,7 @@
         insert into tbgoods (sname,sprice,snum,img,desc) VALUES (#{sname},#{sprice},#{snum},#{img},#{desc})
     </insert>
 
-   <!--根据商品名称查询相关信息-->
+    <!--根据商品名称查询相关信息-->
     <select id="seGoods" resultType="com.cykj.bean.TbGoods">
         select * from tbgoods where
         <if test="sname !=null and sname !=''">
@@ -17,12 +17,12 @@
     </select>
 
 
-<!--    查询全部商品  -->
+    <!--    查询全部商品  -->
     <select id="selAllGoods" resultType="com.cykj.bean.TbGoods">
         select * from tbGoods
     </select>
 
-<!--   修改商品  -->
+    <!--   修改商品  -->
     <update id="updateGoods" parameterType="com.cykj.bean.TbGoods">
         update tbgoods set sprice = #{sprice},snum = #{snum},img = #{img},sprice = #{sprice},desc = #{desc} where sname = #{sname}
     </update>

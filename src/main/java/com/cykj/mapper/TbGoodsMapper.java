@@ -19,9 +19,5 @@ public interface TbGoodsMapper {
     List<TbGoods> selAllGoods();
 
     //修改商品
-    int updateGoods(@Param("sname")String sname,
-                    @Param("sprice")String sprice,
-                    @Param("snum")int snum,
-                    @Param("img")String img,
-                    @Param("desc")String desc);
+    int updateGoods(TbGoods tbGoods);
 }

@@ -16,8 +16,8 @@ public class TbGoodsServiceImpl implements TbGoodsService {
 
     @Override
     public int addGoods(TbGoods tbGoods) {
-        int re=tbGoodsMapper.addGoods(tbGoods);
-        return  re;
+        int re = tbGoodsMapper.addGoods(tbGoods);
+        return re;
     }
 
     //根据商品名称查询相关信息
@@ -25,7 +25,7 @@ public class TbGoodsServiceImpl implements TbGoodsService {
     public String seGoods(String sname) {
         List<TbGoods> seGoods = tbGoodsMapper.seGoods(sname);
         String msg = "";
-        if(seGoods!=null){
+        if (seGoods != null) {
             msg = JSON.toJSONString(seGoods);
         }
         return msg;
@@ -36,9 +36,10 @@ public class TbGoodsServiceImpl implements TbGoodsService {
         return tbGoodsMapper.selAllGoods();
     }
 
+    //修改商品
     @Override
-    public int updateGoods(String sname, String sprice, int snum, String img, String desc) {
-        int re = tbGoodsMapper.updateGoods(sname, sprice, snum, img, desc);
+    public int updateGoods(TbGoods tbGoods) {
+        int re = tbGoodsMapper.updateGoods(tbGoods);
         return re;
     }
 }

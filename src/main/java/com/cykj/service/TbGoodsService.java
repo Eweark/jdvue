@@ -15,5 +15,5 @@ public interface TbGoodsService {
     List<TbGoods> selAllGoods();
 
     //修改商品
-    int updateGoods(String sname, String sprice, int snum, String img, String desc);
+    int updateGoods(TbGoods tbGoods);
 }
