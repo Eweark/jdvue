@@ -12,8 +12,16 @@ import org.springframework.stereotype.Component;
 public class TbGoods {
     private int id;
     private String sname;
-    private String sprice;
+    private double sprice;
     private int snum;
     private String img;
-    private String desc;
+    private String sdesc;
+
+    public TbGoods(String sname, double sprice, int snum, String img, String sdesc) {
+        this.sname = sname;
+        this.sprice = sprice;
+        this.snum = snum;
+        this.img = img;
+        this.sdesc = sdesc;
+    }
 }
