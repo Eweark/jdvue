@@ -17,9 +17,14 @@
     </select>
 
 
-<!--    查询全部商品-->
+<!--    查询全部商品  -->
     <select id="selAllGoods" resultType="com.cykj.bean.TbGoods">
         select * from tbGoods
     </select>
+
+<!--   修改商品  -->
+    <update id="updateGoods" parameterType="com.cykj.bean.TbGoods">
+        update tbgoods set sprice = #{sprice},snum = #{snum},img = #{img},sprice = #{sprice},desc = #{desc} where sname = #{sname}
+    </update>
 
 </mapper>
