@@ -3,5 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cykj.mapper.TbGoodsMapper">
-    <insert id="addGoods" parameterType="com.cykj.bean.TbGoods"></insert>
+    <insert id="addGoods" parameterType="com.cykj.bean.TblGoods">
+        insert into tbgoods (sname,sprice,snum,img,desc) VALUES (#{sname},#{sprice},#{snum},#{img},#{desc})
+    </insert>
 </mapper>
