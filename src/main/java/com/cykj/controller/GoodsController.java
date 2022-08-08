@@ -23,7 +23,6 @@ public class GoodsController {
     @Autowired
     private TbGoodsService tbGoodsService;
 
-
     @RequestMapping(value = "/goods",produces = "application/json;charset=UTF-8")
     public String seGoods(String sname){
         String seGoods = tbGoodsService.seGoods(sname);

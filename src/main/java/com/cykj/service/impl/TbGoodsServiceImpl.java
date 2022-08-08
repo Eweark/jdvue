@@ -35,4 +35,10 @@ public class TbGoodsServiceImpl implements TbGoodsService {
     public List<TbGoods> selAllGoods() {
         return tbGoodsMapper.selAllGoods();
     }
+
+    @Override
+    public int updateGoods(String sname, String sprice, int snum, String img, String desc) {
+        int re = tbGoodsMapper.updateGoods(sname, sprice, snum, img, desc);
+        return re;
+    }
 }
